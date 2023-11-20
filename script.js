@@ -17,10 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
         path: 'bottom.json' // Update this path
     });
 
-    // Play top Lottie once when clicked
-    document.getElementById('lottie1').addEventListener('click', function() {
+    // Play top Lottie once when clicked and then remove the event listener
+    var lottie1Container = document.getElementById('lottie1');
+    var playAnimation1 = function() {
         animation1.goToAndPlay(0, true);
-    });
+        lottie1Container.removeEventListener('click', playAnimation1);
+    };
+    lottie1Container.addEventListener('click', playAnimation1);
 
     // Play/Pause bottom Lottie on click
     document.getElementById('lottie2').addEventListener('click', function() {
