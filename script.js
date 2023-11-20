@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Top Lottie (Plays Once)
+    // Top Lottie (Plays Once and then Destroy)
     var animation1 = lottie.loadAnimation({
         container: document.getElementById('lottie1'),
         renderer: 'svg',
@@ -19,18 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
         path: 'bottom.json' // Update this path
     });
 
-    // Function to play top Lottie and audio once
-    var playAnimation1 = function() {
+    // Event listener for the top Lottie
+    document.getElementById('lottie1').addEventListener('click', function() {
         animation1.goToAndPlay(0, true);
         audio.play(); // Play the audio
-    };
+    });
 
-    // Event listener for the top Lottie
-    var lottie1Container = document.getElementById('lottie1');
-    lottie1Container.addEventListener('click', function() {
-        playAnimation1();
-        // Remove the event listener after the first click
-        lottie1Container.removeEventListener('click', playAnimation1);
+    // Event listener for when top Lottie animation completes
+    animation1.addEventListener('complete', function() {
+        animation1.destroy(); // Destroy the animation
+        // Audio will continue playing
     });
 
     // Play/Pause bottom Lottie on click
