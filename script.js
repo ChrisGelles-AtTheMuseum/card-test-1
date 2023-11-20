@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: 'path_to_your_first_animation.json' // Update this path
+        path: 'top.json' // Update this path
     });
 
     // Bottom Lottie (Loops)
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         renderer: 'svg',
         loop: true,
         autoplay: false,
-        path: 'path_to_your_second_animation.json' // Update this path
+        path: 'bottom.json' // Update this path
     });
 
     // Play top Lottie once when clicked
