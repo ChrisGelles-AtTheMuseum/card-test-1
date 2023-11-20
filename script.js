@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var lottie1Container = document.getElementById('lottie1');
     var playAnimation1 = function() {
         animation1.goToAndPlay(0, true);
-        audio.play(); // Play the audio
+        //audio.play(); // Play the audio
         lottie1Container.removeEventListener('click', playAnimation1);
     };
     lottie1Container.addEventListener('click', playAnimation1);
