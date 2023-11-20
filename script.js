@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.getElementById('container').addEventListener('click', function() {
-        animation1.play();
         animation2.play();
+        animation1.play();
     });
 });
