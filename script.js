@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         container: document.getElementById('lottie2'),
         renderer: 'svg',
         loop: true,
-        autoplay: false,
+        autoplay: true,
         path: 'bottom.json' // Update this path
     });
 
